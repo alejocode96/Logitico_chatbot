@@ -1,15 +1,33 @@
+//importaciones react
 import React from 'react';
 import { useState } from 'react'
 
+//Rutas
+import { useRoutes, BrowserRouter } from 'react-router-dom';
+
+//pages
+import Home from '../Home';
+
+
+//contexto
+import { LogisticoProvider } from '../../Context';
+
+const AppRoutes = () => {
+  let routes = useRoutes([
+    { path: '/', element: <Home /> }
+  ])
+  return routes
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-      <p className='bg-amber-200'>INIT PROYECT</p>
-      
-    </>
+    <LogisticoProvider>
+      <BrowserRouter>
+        <AppRoutes></AppRoutes>
+      </BrowserRouter>
+    </LogisticoProvider>
   )
 }
 
