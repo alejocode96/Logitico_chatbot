@@ -3,11 +3,12 @@ import { useState } from 'react'
 import React from 'react'
 //componentes
 import Header from '../../Components/Home/header'
+import WhoIsLogistico from '../../Components/Home/whoIsLogistico'
 
 function Home() {
     return (
         <>
-            <main className='bg-white dark:bg-[#09090B] h-screen'>
+            <main className='bg-white dark:bg-[#09090B]'>
                 {/* fondo azul */}
                 {/* <div className="h-full absolute inset-0 z-40 bg-[image:radial-gradient(80%_50%_at_50%_-20%,hsl(206,81.9%,65.3%,0.5),rgba(255,255,255,0))]"></div> */}
                 <div className="h-[200%] absolute inset-0 z-40 bg-[image:radial-gradient(80%_50%_at_50%_-20%,rgba(196,214,0,0.9),rgba(255,255,255,0))]
@@ -49,6 +50,9 @@ function Home() {
                 </svg>
                 {/* Header */}
                 <Header></Header>
+                {/* Conece a ogistico */}
+                <WhoIsLogistico></WhoIsLogistico>
+
             </main>
 
         </>
